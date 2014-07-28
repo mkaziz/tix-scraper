@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseRedire
 
 ## Python imports
 import json
+import requests
 
 def createJSONResponse(data):
     response_data = { "success" : True, "data" : data }
@@ -20,4 +21,7 @@ def getPrices(request, eventId=None):
     if eventId == None:
         return render(request, "index.html")
     
-    render(request, "index.html", {something: "hello world"})
+    event = requests.get("https://api.seatgeek.com/2/events/1979881")
+    
+    
+    return render(request, "index.html", {"data": event.json().get("stats")})
