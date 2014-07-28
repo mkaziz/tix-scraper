@@ -13,5 +13,5 @@ def createJSONResponse(data):
 
 # Create your views here.
 def index(request):
-    return createJSONResponse({})
+    #return createJSONResponse({})
     return render(request, "index.html")
