@@ -10,8 +10,14 @@
 {% block Content %}
 
     <div class="starter-template">
-      <h1>Bootstrap starter template</h1>
-      <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      <h1>See Prices</h1>
+      <p class="lead">Use the searchbox to see prices</p>
+      <form action="/get-prices/" method="get">
+        <input name="event-id" type="text" class="" />
+        <input type="submit" value="Fetch" />
+      </form>
+      {{something}}
+      
     </div>
       
 {% endblock%}

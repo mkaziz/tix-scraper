@@ -13,4 +13,11 @@ def createJSONResponse(data):
 # Create your views here.
 def index(request):
     #return createJSONResponse({})
-    return render(request, "index.html")
+    return getPrices(request)
+
+# Create your views here.
+def getPrices(request, eventId=None):
+    if eventId == None:
+        return render(request, "index.html")
+    
+    render(request, "index.html", {something: "hello world"})
