@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 from django.conf import settings
-from GreaterGood.views import *
+from scraper.views import *
 
 from django.conf.urls.static import static
 
