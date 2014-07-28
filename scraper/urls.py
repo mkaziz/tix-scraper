@@ -6,5 +6,5 @@ from django.conf.urls.static import static
 
 urlpatterns = patterns('',
     url(r'^$', index),
-)#  + static(settings.STATIC_ROOT, document_root=settings.STATIC_ROOT)
+) + static(settings.STATIC_ROOT, document_root=settings.STATIC_ROOT)
 
