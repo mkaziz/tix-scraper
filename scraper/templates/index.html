@@ -16,8 +16,25 @@
         <input name="event-id" type="text" class="" />
         <input type="submit" value="Fetch" />
       </form>
-      <div>{{data.lowest_price}}</div>
       
+      <table class='table table-bordered'>
+        <tr>
+          <td>Lowest Price</td>
+          <td>{{data.lowest_price}}</td>
+        </tr>
+        <tr>
+          <td>Average Price</td>
+          <td>{{data.average_price}}</td>
+        </tr>
+        <tr>
+          <td>Highest Price</td>
+          <td>{{data.highest_price}}</td>
+        </tr>
+        <tr>
+          <td>Listing Count</td>
+          <td>{{data.listing_count}}</td>
+        </tr>
+      </table>
       
     </div>
       

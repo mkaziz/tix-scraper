@@ -17,11 +17,12 @@ def index(request):
     return getPrices(request)
 
 # Create your views here.
-def getPrices(request, eventId=None):
-    if eventId == None:
+def getPrices(request):
+    event_id = request.GET.get('event-id');
+    if event_id == None:
         return render(request, "index.html")
     
-    event = requests.get("https://api.seatgeek.com/2/events/1979881")
+    event = requests.get("https://api.seatgeek.com/2/events/" + event_id)
     
     
     return render(request, "index.html", {"data": event.json().get("stats")})
